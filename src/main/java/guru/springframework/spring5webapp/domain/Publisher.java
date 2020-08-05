@@ -16,6 +16,7 @@ public class Publisher {
     private String name;
     private String address_line_1;
     private String city;
+    private String state;
     private String zip;
 
     @OneToMany
@@ -26,10 +27,11 @@ public class Publisher {
     public Publisher() {
     }
 
-    public Publisher(String name, String address_line_1, String city, String zip) {
+    public Publisher(String name, String address_line_1, String city, String state, String zip) {
         this.name = name;
         this.address_line_1 = address_line_1;
         this.city = city;
+        this.state = state;
         this.zip = zip;
     }
 
@@ -69,6 +71,14 @@ public class Publisher {
         return zip;
     }
 
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
     public void setZip(String zip) {
         this.zip = zip;
     }
@@ -88,6 +98,7 @@ public class Publisher {
                 ", name='" + name + '\'' +
                 ", address_line_1='" + address_line_1 + '\'' +
                 ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
                 ", zip='" + zip + '\'' +
                 '}';
     }
